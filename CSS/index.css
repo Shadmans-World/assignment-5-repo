@@ -1,0 +1,10 @@
+/* Common CSS */
+
+.btn-primary-1{
+    background-color: rgb(180, 244, 97);
+    width: 6rem;
+    padding: 10px;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+}
