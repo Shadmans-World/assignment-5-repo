@@ -23,11 +23,11 @@
     <!-- NavBAr &&&&& Banner Section Start -->
     <header class="sticky top-0 bg-gray-100 w-full">
       <!-- NavBAr Start -->
-      <nav class="flex justify-between items-center max-w-[85%] mx-auto p-5">
+      <nav class="flex justify-between items-center lg:max-w-[85%] mx-auto p-5">
         <button id="go-blog" class="btn-primary-1">Blog</button>
         <div class="flex items-center gap-2">
           <img class="w-7" src="assets/logo.png" alt="" />
-          <p class="font-bold">Donate Bangladesh</p>
+          <p class="font-bold hidden lg:block">Donate Bangladesh</p>
         </div>
         <div class="flex items-center gap-2">
           <img src="assets/coin.png" alt="" />
@@ -42,23 +42,30 @@
       <section
         class="flex justify-center items-center gap-4 sticky top-[5.2rem] mb-9 bg-white pt-12 pb-6"
       >
-        <button class="btn-primary-1">Donation</button>
-        <button class="btn">History</button>
+        <button id="donation-btn" class="btn-primary-1">Donation</button>
+        <button id="history-btn" class="btn">History</button>
       </section>
       <!-- Banner End -->
 
       <!-- Custom MAin -->
       <div class="custom-weidth-main max-w-[85%] mx-auto">
         <!-- Donation Card Start -->
-        <section class="flex flex-col gap-y-6 mb-5">
+        <section id="donation" class="flex flex-col gap-y-6 mb-5">
           <!-- Card-1 -->
-          <div class="flex gap-6 p-5 border-2 rounded-lg shadow-lg">
-            <div class="w-[40%]">
+          <div
+            class="flex flex-col justify-center items-center lg:flex-row gap-6 p-5 border-2 rounded-lg shadow-lg"
+          >
+            <div class="lg:w-[40%]">
               <img src="assets/noakhali.png" alt="" />
             </div>
-            <div class="w-[60%] flex flex-col gap-y-6">
+            <div
+              class="lg:w-[60%] flex flex-col gap-y-6 justify-center lg:justify-start items-center lg:items-start"
+            >
               <button class="btn w-[max-content]">
-                <img src="assets/coin.png" alt="" /><span id="noakhali-donate">1000</span> BDT
+                <img src="assets/coin.png" alt="" /><span id="noakhali-donate"
+                  >1000</span
+                >
+                BDT
               </button>
               <h3 class="font-semibold">
                 Donate for Flood at Noakhali, Bangladesh
@@ -71,26 +78,56 @@
                 supporting the relief efforts and making a positive impact on
                 the lives of those in need.
               </p>
-              <input id="noakhali-donate-amount"
-                class="border-2 p-3 rounded-md"
+              <input
+                id="noakhali-donate-amount"
+                class="border-2 p-3 rounded-md lg:w-full"
                 type="text"
                 name=""
                 id=""
                 placeholder="Write Donation Amount"
               />
-              <button id="noakhali-button" class="btn-primary-1 w-full">Donate Now</button>
+              
+              <!-- MODAL -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button id="noakhali-button" class="btn-primary-1 w-full" onclick="my_modal_1.showModal()">
+                Donate Now
+              </button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box flex flex-col justify-center items-center  text-center gap-y-3">
+                  <h3 class=" text-lg font-bold"></h3>
+                  <img class="w-6 " src="assets/coin.png" alt="">
+                  <p class="py-4">
+                   
+                  </p>
+                  <h2 class=" text-lg font-extrabold"></h3>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close Information</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+             
             </div>
           </div>
           <!-- Card 1 End -->
 
           <!-- Card 2 Start -->
-          <div class="flex gap-6 p-5 border-2 rounded-lg shadow-lg">
-            <div class="w-[40%]">
+          <div
+            class="flex flex-col justify-center items-center lg:flex-row gap-6 p-5 border-2 rounded-lg shadow-lg"
+          >
+            <div class="lg:w-[40%]">
               <img src="assets/feni.png" alt="" />
             </div>
-            <div class="w-[60%] flex flex-col gap-y-7">
+            <div
+              class="lg:w-[60%] flex flex-col gap-y-7 justify-center lg:justify-start items-center lg:items-start"
+            >
               <button class="btn w-[max-content]">
-                <img src="assets/coin.png" alt="" /><span id="feni-donate" >0</span> BDT
+                <img src="assets/coin.png" alt="" /><span id="feni-donate"
+                  >0</span
+                >
+                BDT
               </button>
               <h3 class="font-semibold">
                 Donate for Flood Relief in Feni,Bangladesh
@@ -105,26 +142,36 @@
                 towards making a real difference. Please consider donating today
                 to assist those in urgent need.
               </p>
-              <input id="feni-donate-amount"
-                class="border-2 p-3 rounded-md"
+              <input
+                id="feni-donate-amount"
+                class="border-2 p-3 rounded-md lg:w-full"
                 type="text"
                 name=""
                 id=""
                 placeholder="Write Donation Amount"
               />
-              <button id="feni-button" class="btn-primary-1 w-full">Donate Now</button>
+              <button id="feni-button" class="btn-primary-1 w-full">
+                Donate Now
+              </button>
             </div>
           </div>
           <!-- Card 2 End -->
 
           <!-- Card 3 Stat -->
-          <div class="flex gap-6 p-5 border-2 rounded-lg shadow-lg">
-            <div class="w-[40%]">
+          <div
+            class="flex flex-col justify-center items-center lg:flex-row gap-6 p-5 border-2 rounded-lg shadow-lg"
+          >
+            <div class="lg:w-[40%]">
               <img src="assets/quota-protest.png" alt="" />
             </div>
-            <div class="w-[60%] flex flex-col gap-y-7">
+            <div
+              class="lg:w-[60%] flex flex-col gap-y-7 justify-center lg:justify-start items-center lg:items-start"
+            >
               <button class="btn w-[max-content]">
-                <img src="assets/coin.png" alt="" /><span id="quota-donate">0</span> BDT
+                <img src="assets/coin.png" alt="" /><span id="quota-donate"
+                  >0</span
+                >
+                BDT
               </button>
               <h3 class="font-semibold">
                 Aid for Injured in the Quota Movement
@@ -140,14 +187,17 @@
                 recovery. Please consider making a donation to support these
                 brave individuals in their time of need.
               </p>
-              <input id="quota-donate-amount"
-                class="border-2 p-3 rounded-md"
+              <input
+                id="quota-donate-amount"
+                class="border-2 p-3 rounded-md lg:w-full"
                 type="text"
                 name=""
                 id=""
                 placeholder="Write Donation Amount"
               />
-              <button id="quota-button" class="btn-primary-1 w-full">Donate Now</button>
+              <button id="quota-button" class="btn-primary-1 w-full">
+                Donate Now
+              </button>
             </div>
           </div>
           <!-- CArd 3 End -->
@@ -155,22 +205,18 @@
         <!-- Donation Card End -->
 
         <!-- History -->
-        <div class="hidden history">
-          <div class="border-2 p-3"></div>
-        </div>
+        <div id="history" class="hidden"></div>
       </div>
-
- 
     </main>
 
     <script>
-      document.getElementById('go-blog').addEventListener('click',function(){
-        window.location.href = 'blog.html'
-      })
+      document.getElementById("go-blog").addEventListener("click", function () {
+        window.location.href = "blog.html";
+      });
     </script>
     <script src="JS/shared.js"></script>
     <script src="JS/donate.js"></script>
-   
-    
+    <script src="JS/switch.js"></script>
+    <script src="JS/transaction.js"></script>
   </body>
 </html>
