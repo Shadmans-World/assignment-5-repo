@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <!-- NavBAr &&&&& Banner Section Start -->
+     <header class="sticky top-0 z-10 bg-gray-100 w-full ">
+        <!-- NavBAr Start -->
+        <nav class="flex justify-between items-center max-w-[85%] mx-auto p-5">
+          <button id="back-home" class="btn-primary-1">HOME</button>
+          <div class="flex items-center gap-2">
+            <img class="w-7" src="assets/logo.png" alt="" />
+            <p class="font-bold">Donate Bangladesh</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="assets/coin.png" alt="" />
+            <p class="font-bold"><span>10500 </span>BDT</p>
+          </div>
+        </nav>
+        <!-- NAvBAr End -->
+      </header>
+  
+      <main class="max-w-[85%] mx-auto mt-6 flex flex-col gap-y-4 ">
+        <h2 class="flex items-center gap-3 text-3xl font-bold">Important FAQ<img class="w-8" src="assets/chat.png" alt=""></h2>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Option Model (DOM)? </div>
+            <div class="collapse-content">
+              <p>DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from dom?</div>
+            <div class="collapse-content">
+              <p>
+                You can select an element from the DOM using JavaScript methods like document.getElementById(), document.querySelector(), document.getElementsByClassName(), or document.getElementsByTagName() to access specific elements.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM and why it is useful?</div>
+            <div class="collapse-content">
+              <p>
+                Event delegation in the DOM is a technique where a single event listener is attached to a parent element to manage events for its child elements. Instead of adding event listeners to individual child elements, the parent handles the events by capturing them as they bubble up through the DOM (event bubbling).
+                <br><br>
+                
+                Why it's useful: <br> <br>
+                
+                Performance: Reduces the number of event listeners needed, saving memory and improving efficiency, especially with dynamic elements. <br>
+                Dynamic Elements: Works well when child elements are dynamically added, as the parent listener will still capture their events.
+                Simplifies Code: Reduces repetitive event binding logic, making the code cleaner and more maintainable. <br>
+                For example, handling clicks on multiple buttons inside a container without adding listeners to each button individually is a common use case.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-xl font-medium">How Do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>You can manipulate an element's attributes and styles in the DOM using the following methods: <br><br><br>
+
+                1. Manipulating Attributes: <br> <br>
+                setAttribute(): Set or update an attribute. <br>
+                Example: element.setAttribute('src', 'newImage.jpg'); <br> <br>
+                getAttribute(): Retrieve the value of an attribute. <br>
+                Example: let value = element.getAttribute('src'); <br><br>
+                removeAttribute(): Remove an attribute. <br>
+                Example: element.removeAttribute('disabled'); <br><br><br>
+                2. Manipulating Styles: <br><br>
+                Modify the element’s style property: <br>
+                Example: element.style.color = 'blue'; <br><br>
+                Use classList to add, remove, or toggle CSS classes: <br>
+                Example: element.classList.add('highlight');</p>
+            </div>
+          </div>
+
+      </main>
+
+
+      <script>
+        document.getElementById('back-home').addEventListener('click',function(){
+          window.location.href = 'index.html'
+        })
+      </script>
+</body>
+</html>
