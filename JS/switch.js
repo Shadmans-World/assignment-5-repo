@@ -7,6 +7,10 @@ donationBtn.classList.remove('btn');
 donationBtn.classList.add('btn-primary-1');
 historyBtn.classList.add('btn');
 historyBtn.classList.remove('btn-primary-1');
+var footer = document.getElementById('footer');
+    
+    footer.classList.remove('mt-auto');
+
 
 
 })
@@ -20,5 +24,8 @@ document.getElementById('history-btn').addEventListener('click',function(){
     var donationBtn  = document.getElementById('donation-btn')
     donationBtn.classList.remove('btn-primary-1');
     donationBtn.classList.add('btn');
+    var footer = document.getElementById('footer');
+    
+    footer.classList.add('mt-auto');
 })
 

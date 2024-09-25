@@ -8,11 +8,11 @@
     var modalContent = document.querySelector('#my_modal_1 .modal-box p');
     var modalH3 = document.querySelector('#my_modal_1 .modal-box h3');
     var modalH2 = document.querySelector('#my_modal_1 .modal-box h2');
-    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount < 0) {
+    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount <= 0) {
         modalH3.innerText = "";
         modalH2.innerText = "";
-        modalContent.innerHTML = "Wrong! Enter Positive Number";
-        myModal.showModal(); // Display the modal with the error message
+        modalContent.innerHTML = "Wrong! Enter Valid Amount";
+        myModal.showModal(); 
         return;
     }
     if (availableMoney >= donateAmount) {
@@ -28,7 +28,7 @@
         // History
         var newDiv = document.createElement('div');
         newDiv.classList.add('border-2', 'rounded-md', 'p-5', 'mb-7');
-        newDiv.innerHTML = `<p>${donateAmount} Taka is Donated for Flood at Noakhali, Bangladesh</P>
+        newDiv.innerHTML = `<p style="font-weight:bold">${donateAmount} Taka is Donated for Flood at Noakhali, Bangladesh</P>
  <p>${new Date()}<p>
  `
         document.getElementById('history').appendChild(newDiv);
@@ -55,10 +55,10 @@
     var modalH3 = document.querySelector('#my_modal_1 .modal-box h3');
     var modalH2 = document.querySelector('#my_modal_1 .modal-box h2');
 
-    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount < 0) {
+    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount <= 0) {
         modalH3.innerText = "";
         modalH2.innerText = "";
-        modalContent.innerHTML = "Wrong! Enter Positive Number";
+        modalContent.innerHTML = "Wrong! Enter Valid Amount";
 
         myModal.showModal();
         return;
@@ -81,7 +81,7 @@
         var newDiv = document.createElement('div');
         newDiv.classList.add('border-2', 'rounded-md', 'p-5', 'mb-7');
 
-        newDiv.innerHTML = `<p>${donateAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</P>
+        newDiv.innerHTML = `<p style="font-weight:bold">${donateAmount} Taka is Donated for Flood Relief in Feni,Bangladesh</P>
  <p>${new Date()}<p>
  `
 
@@ -116,10 +116,10 @@ document.getElementById('quota-button').addEventListener('click', function (even
     var modalH2 = document.querySelector('#my_modal_1 .modal-box h2');
 
 
-    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount < 0) {
+    if (donateAmount === null || donateAmount === "" || isNaN(donateAmount) || donateAmount <= 0) {
         modalH3.innerText = "";
         modalH2.innerText = "";
-        modalContent.innerHTML = "Wrong! Enter Positive Number";
+        modalContent.innerHTML = "Wrong! Enter Valid Number";
 
         myModal.showModal();
         return;
@@ -142,7 +142,7 @@ document.getElementById('quota-button').addEventListener('click', function (even
         var newDiv = document.createElement('div');
         newDiv.classList.add('border-2', 'rounded-md', 'p-5', 'mb-7');
 
-        newDiv.innerHTML = `<p>${donateAmount} Taka is Donated for Injured in the Quota Movement</P>
+        newDiv.innerHTML = `<p style="font-weight:bold">${donateAmount} Taka is Donated for Injured in the Quota Movement</P>
  <p>${new Date()}<p>
  `
 
